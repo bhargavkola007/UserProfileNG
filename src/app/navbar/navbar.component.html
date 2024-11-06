@@ -1,0 +1,10 @@
+<nav class="bg-white shadow-md dark:bg-gray-800">
+  <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-16">
+          <div class="flex items-center">
+              <span class="text-xl font-bold text-gray-800 dark:text-white">Dashboard</span>
+          </div>
+          <app-profile-dropdown (logoutEvent)="logout()"></app-profile-dropdown>
+      </div>
+  </div>
+</nav>

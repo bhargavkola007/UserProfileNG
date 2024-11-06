@@ -1,0 +1,58 @@
+<div class="relative">
+  <button 
+    (click)="toggleDropdown()" 
+    type="button" 
+    class="flex items-center">
+    <div class="user-icon">
+      <i class="fas fa-user"></i>
+      <!-- or use a simple text icon -->
+      👤
+    </div>
+    <span class="ml-2">User</span>
+    <i class="ml-2">▼</i>
+  </button>
+
+  <div 
+    class="absolute" 
+    [class.show]="isOpen"
+    (clickOutside)="closeDropdown()">
+    <!-- Header with profile info -->
+    <div class="p-4">
+      <div class="flex items-center">
+        <div class="user-icon-large">
+          <i class="fas fa-user"></i>
+          <!-- or use a simple text icon -->
+          👤
+        </div>
+        <div class="ml-3">
+          <div class="font-semibold text-gray-700">{{ user?.name || 'User' }}</div>
+          <div class="text-sm text-gray-500">{{ user?.email || 'user@example.com' }}</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu items -->
+    <div class="py-2">
+      <button (click)="onEditProfileClick()" class="menu-item">
+        <i>👤</i>
+        Edit Profile
+      </button>
+      <button (click)="onProfileClick()" class="menu-item">
+        <i>👤</i>
+        Profile
+      </button>
+      <button (click)="onSettingsClick()" class="menu-item">
+        <i>⚙️</i>
+        Settings
+      </button>
+      <button (click)="onChangePasswordClick()" class="menu-item">
+        <i>🔑</i>
+        Change Password
+      </button>
+      <button class="menu-item text-red-600" (click)="onLogoutClick()">
+        <i>🚪</i>
+        Logout
+      </button>
+    </div>
+  </div>
+</div>

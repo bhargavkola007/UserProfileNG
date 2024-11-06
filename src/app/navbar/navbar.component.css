@@ -1,0 +1,86 @@
+/* Navbar container */
+nav {
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dark nav {
+  background-color: #1f2937; /* Dark mode background color */
+}
+
+nav .max-w-7xl {
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+/* Flexbox adjustments for navbar items */
+nav .h-16 {
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Navbar title styling */
+nav .text-xl {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937; /* Dark text for light mode */
+}
+
+.dark nav .text-xl {
+  color: #f9fafb; /* Light text for dark mode */
+}
+
+/* Dropdown container styling */
+app-profile-dropdown {
+  position: relative;
+}
+
+/* Profile dropdown button styling */
+app-profile-dropdown button {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+app-profile-dropdown button:hover {
+  background-color: #f3f4f6;
+}
+
+.dark app-profile-dropdown button:hover {
+  background-color: #374151;
+}
+
+/* Avatar image */
+app-profile-dropdown img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 0.5rem;
+}
+
+/* Username text */
+app-profile-dropdown span {
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+.dark app-profile-dropdown span {
+  color: #d1d5db;
+}
+
+/* Dropdown icon styling */
+app-profile-dropdown i {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-left: 0.5rem;
+}
+
+.dark app-profile-dropdown i {
+  color: #9ca3af;
+}

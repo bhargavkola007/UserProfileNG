@@ -1,0 +1,28 @@
+<div class="modal-backdrop" *ngIf="isOpen">
+  <div class="modal-container">
+    <div class="modal-content">
+      <h2 class="modal-title">Settings</h2>
+      <button class="close-btn" (click)="closeModal()">×</button>
+
+      <div class="settings-section">
+        <h3>Profile Settings</h3>
+        <p>Manage your account preferences and personal information.</p>
+      </div>
+
+      <div class="settings-section">
+        <h3>Notification Settings</h3>
+        <p>Configure how and when you receive notifications.</p>
+      </div>
+
+      <div class="settings-section">
+        <h3>Privacy Settings</h3>
+        <p>Control your privacy preferences and data sharing options.</p>
+      </div>
+
+      <div class="modal-footer">
+        <button class="save-btn" (click)="closeModal()">Save Changes</button>
+        <button class="cancel-btn" (click)="closeModal()">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
